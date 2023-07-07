@@ -1,0 +1,10 @@
+body {
+    background-color: black;
+    background-image: linear-gradient(to bottom, #000000, #ffffff);
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    min-height: 100vh;
+  }
