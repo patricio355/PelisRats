@@ -6,11 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
-import { InicioComponent } from './components/inicio/inicio.component';
 import { RouterModule } from '@angular/router';
-import { Punto1Component } from './components/punto1/punto1.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PrimeroComponent } from './components/primero/primero.component';
 import { AmazonComponent } from './components/amazon/amazon.component';
 
 @NgModule({
@@ -18,9 +15,6 @@ import { AmazonComponent } from './components/amazon/amazon.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    InicioComponent,
-    Punto1Component,
-    PrimeroComponent,
     AmazonComponent,
   ],
   imports: [
