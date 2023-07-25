@@ -1,0 +1,13 @@
+<h1>Lo Mas Visto</h1>
+
+<section class="movie-carousel">
+  <div class="carousel-container">
+    <!-- Repite la estructura del contenido de cada película aquí -->
+    <div *ngFor="let pelicula of pelis" class="slide">
+      <a href="https://metagnathtuggers.com/e/tih9hdhfwuo3" target="_blank">
+        <img src="{{pelicula.imagen}}" alt="{{pelicula.nombre}}">
+        <h3>{{pelicula.nombre}}</h3>
+      </a>
+    </div>
+  </div>
+</section>
