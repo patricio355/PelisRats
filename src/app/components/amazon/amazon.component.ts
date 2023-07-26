@@ -10,9 +10,11 @@ import { PeliculaService } from 'src/app/services/pelicula.service';
 })
 export class AmazonComponent {
 peliculas!: Array<any>;
+p: Array<any>;
 nombre!: string
   constructor( private servicio: PeliculaService){
  this.peliculas = new Array <Pelicula>();
+ this.p = new Array <Pelicula>();
   }
 
   obtenerPelicula(nombre: string){
@@ -31,6 +33,8 @@ nombre!: string
         });
       }
     
+
+        
   }
 
 

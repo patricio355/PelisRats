@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AmazonComponent } from './components/amazon/amazon.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { PeliculaComponent } from './compontens/pelicula/pelicula.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
     FooterComponent,
     AmazonComponent,
     InicioComponent,
+    PeliculaComponent,
   ],
   imports: [
     BrowserModule,

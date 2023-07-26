@@ -1,0 +1,66 @@
+
+<div class="row">
+    <div class="d-flex col-1" style="height: 200px;">
+        <div class="vr"></div>
+      </div>
+<div class="col-4">
+    <img src="{{pelicula.imagen}}" alt="{{pelicula.nombre}}" width="400p">
+
+</div>
+
+<div class="col-5">
+    <h1 class="text-white">{{pelicula.nombre}}</h1>
+    <section>
+        <h3 class="text-white">Descripción general</h3>
+        <p class="text-white">
+            {{pelicula.descripcion}}
+        </p>
+    </section>
+    <section>
+        <p class="text-white">
+           Presupuesto: {{pelicula.presupuesto }}
+        </p>
+       
+        <p class="text-white">
+           Popularidad: {{pelicula.popularidad}}
+        </p>
+        
+          
+           <div *ngIf="pelicula.adult == false">
+            <div class="alert alert-success" role="alert">
+                Pelicula apta para todo publico
+              </div>
+           
+             
+           </div>
+
+           <div *ngIf="pelicula.adult == true">
+            <div class="alert alert-danger" role="alert">
+                Pelicula solo para adultos
+              </div>
+           
+             
+           </div>
+           
+           <div class="col-12 " >
+            <img src="{{pelicula.imagenGrande}}" alt="{{pelicula.nombre}}" width="100p">
+            <p class="text-white">
+                Lenguaje: {{pelicula.lenguaje}}
+             </p>
+        </div>
+        
+    </section>
+
+   
+    
+
+   
+</div>
+
+</div>
+
+<section>
+    <h4 class="text-white">Trailer</h4>
+    <iframe width="600" height="400" [src]="pelicula.video" frameborder="0" allowfullscreen></iframe>
+</section>
+
