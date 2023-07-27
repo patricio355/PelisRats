@@ -13,12 +13,13 @@ export class PeliculaService {
     obtenerReservas(pelicula: string): Observable<any> {
       const httpOptions = {
         headers: new HttpHeaders({
-          'X-RapidAPI-Key': 'd351112afemsha1e8b74bcc13a95p144513jsn640a2e265989',
-		      'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
+          accept: 'application/json',
+          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MjY5NzFmOTRkZWFkNTI0ZDg3YzUxMTI0MmNiYjZmZSIsInN1YiI6IjY0YzA0MDhkMTdjNDQzMDEzZGEzYWQxZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DAroTmWi_w_XfNhuDyiDyJCNzAqDD6tunJOW4hQFFsc'
+       
         }),
         params: new HttpParams()
       }
-      return this._http.get("https://online-movie-database.p.rapidapi.com/auto-complete?q="+ pelicula, httpOptions);
+      return this._http.get("https://api.themoviedb.org/3/search/movie?query="+ pelicula, httpOptions);
     }
 
     obtenerPeliPorId(id : string): Observable<any> {

@@ -8,7 +8,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { AmazonComponent } from './components/amazon/amazon.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { PeliculaComponent } from './compontens/pelicula/pelicula.component';
 
@@ -17,7 +16,6 @@ import { PeliculaComponent } from './compontens/pelicula/pelicula.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    AmazonComponent,
     InicioComponent,
     PeliculaComponent,
   ],

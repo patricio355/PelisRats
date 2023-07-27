@@ -1,4 +1,15 @@
-<h1 class="text-white">Lo Mas Visto</h1>
+<div class="input-group mb-3">
+  <input type="text" class="form" placeholder="Buscar película..." [(ngModel)]="nombre">
+  <button class="btn btn-secondary" (click)="obtenerPelicula(nombre)">Buscar</button>
+</div>
+
+<div *ngIf="hola == 'hola' ">
+   <h1 >Lo Mas Visto</h1>
+</div>
+<div *ngIf="hola != 'hola' ">
+  <h1>Resultados de busqueda para : {{hola}}</h1>
+</div>
+
 
 <section class="movie-carousel">
   <div class="carousel-container">
@@ -7,7 +18,7 @@
       <!-- <a href="https://metagnathtuggers.com/e/tih9hdhfwuo3" target="_blank"> -->
         <a href="../pelicula/{{pelicula.id}}">
         <img src="{{pelicula.imagen}}" alt="{{pelicula.nombre}}">
-        <h3>{{pelicula.nombre}}</h3>
+        <h4>{{pelicula.nombre}}</h4>
       </a>
     </div>
   </div>

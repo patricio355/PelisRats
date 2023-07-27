@@ -12,10 +12,16 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class PeliculaComponent {
 accion!:string;
 pelicula!: Pelicula;
+id!: string
+unsafeUrl: string = '...'; 
 constructor(private sanitizer: DomSanitizer,private servicio: PeliculaService, private router: Router, private activatedRoute: ActivatedRoute){
 this.pelicula = new Pelicula();
 
 }
+get safeUrl() {
+  return this.sanitizer.bypassSecurityTrustResourceUrl(this.unsafeUrl);
+}
+
 
 ngOnInit(): void {
   this.activatedRoute.params.subscribe(params => {
@@ -24,6 +30,8 @@ ngOnInit(): void {
     } else {
       this.accion = "update";
       this.cargarPelicula(params['id'])
+      this.id= params['id']
+      console.log(this.id)
     }
   });
 }
