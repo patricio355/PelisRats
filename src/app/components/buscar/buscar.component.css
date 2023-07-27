@@ -1,0 +1,59 @@
+/* Estilos para el carrusel
+.movie-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+  } */
+  
+  .carousel-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los cuadros se ajusten automáticamente a las filas */
+   
+  }
+  
+  .slide {
+    flex-basis: calc(25% - 20px); /* Ancho del 25% menos el margen derecho e izquierdo */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para resaltar los cuadros */
+    margin : 10px
+    
+  }
+  
+  .slide img {
+   width: 100%;/* Ajustar todas las imágenes al 100% del ancho del cuadro */
+    height: 500px; /* Ajustar la altura de todas las imágenes (ajusta este valor según tus preferencias) */
+    object-fit: cover; /* Escalar la imagen para que ocupe todo el espacio sin deformarla */
+
+  }
+  
+  .slide h4 {
+    text-align:left;
+    margin: 10px 0;
+    color: #fff;
+  }
+  
+  /* Estilos adicionales (puedes personalizarlos según tus preferencias) */
+  header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #fff;
+  }
+  /* Estilos para el título de cada película */
+
+  a {
+    text-decoration: none; /* Quital el subrayado */
+  }
+  .input-group{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }

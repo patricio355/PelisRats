@@ -1,27 +1,39 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Pelicula } from 'src/app/models/pelicula';
 import { PeliculaService } from 'src/app/services/pelicula.service';
 
 @Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  selector: 'app-buscar',
+  templateUrl: './buscar.component.html',
+  styleUrls: ['./buscar.component.css']
 })
-export class InicioComponent {
+
+export class BuscarComponent {
+  accion!:string;
   pelis!:Array<Pelicula>;
   pelicula!:string;
 nombre!:string;
   peliculas!: Array<any>;
 p: Array<any>;
 hola:string = "hola";
-constructor(private servicio : PeliculaService,private router: Router){
+constructor(private sanitizer: DomSanitizer,private servicio: PeliculaService, private router: Router, private activatedRoute: ActivatedRoute){
   this.pelis = new Array<Pelicula>();
   this.peliculas = new Array <Pelicula>();
  this.p = new Array <Pelicula>();
- this.obtenerPeli()
 }
+ngOnInit(): void {
+  this.activatedRoute.params.subscribe(params => {
+    if (params['id'] == "0") {
+      this.accion = "new";
+    } else {
+      this.accion = "update";
+      this.obtenerPelicula(params['id'])
+    }
+  });
+}
+
 
 obtenerPelicula(nombre: string){
   this.servicio.obtenerReservas(nombre).subscribe(
@@ -46,28 +58,9 @@ obtenerPelicula(nombre: string){
       });
     }
 
-// Trae las 20 peliculas mejor rankeadas
-obtenerPeli(){
-  this.servicio.obtener().subscribe(
-    result=>{
-      console.log(result)
-      for(let i=0 ; i <=19 ;i++){
-          let unaPelicula = new Pelicula();
-      unaPelicula.imagen = "https://image.tmdb.org/t/p/w500" +result.results[i].poster_path ; 
-      unaPelicula.nombre = result.results[i].title; 
-      unaPelicula.id = result.results[i].id
-        this.peliculas.push(unaPelicula)
-        unaPelicula = new Pelicula();
-      }
-    
-       
-      });
-    }
-
-
     buscar(nombre:string){
       
-        this.router.navigate(["buscar/", nombre])
-      
-    }
+      this.router.navigate(["buscar/", nombre])
+    
+  }
 }
