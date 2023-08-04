@@ -57,3 +57,46 @@
     width: 100%;
     justify-content: flex-end;
   }
+
+  input{
+    border: 1px solid rgba(61,79,145,.5);
+    background-color: rgba(8,15,40,.5);
+    color: beige;
+    padding: 0.25rem 1rem;
+    border-radius: 2rem;
+  }
+
+  button{
+    border: 1px solid rgba(61,79,145,.5);
+    background-color: rgba(8,15,40,.5);
+    color:#fff;
+    padding: 0.25rem 1rem;
+    border-radius: 2rem;
+  }
+
+
+  @media(max-width: 500px){
+    h1{
+      color: #fff;
+      font-size: 20px;
+    }
+    .slide {
+      width: 25%;
+      /* flex-basis: calc(25% - 20px); Ancho del 25% menos el margen derecho e izquierdo */
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para resaltar los cuadros */
+      margin : 10px;
+      
+    }
+    
+    .slide img {
+     width: 100%;/* Ajustar todas las imágenes al 100% del ancho del cuadro */
+       /* Ajustar la altura de todas las imágenes (ajusta este valor según tus preferencias) */
+      object-fit: cover; /* Escalar la imagen para que ocupe todo el espacio sin deformarla */
+  height: auto;
+    }
+    
+  }

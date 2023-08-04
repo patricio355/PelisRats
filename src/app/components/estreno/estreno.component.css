@@ -81,13 +81,6 @@ height: auto;
     border-radius: 2rem;
   }
 
-  .listaG{
-    color: #fff;
-    font-size: 17px;
-    text-align: left;
-    padding:0%;
-  }
-
   @media(max-width: 500px){
     h1{
       color: #fff;

@@ -12,16 +12,13 @@ import { PeliculaService } from 'src/app/services/pelicula.service';
 
 export class BuscarComponent {
   accion!:string;
-  pelis!:Array<Pelicula>;
-  pelicula!:string;
-nombre!:string;
   peliculas!: Array<any>;
-p: Array<any>;
-hola:string = "hola";
+  pelicula!:Pelicula;
+  nombre!:string; // lo uso para mandar por el buscador
+
 constructor(private sanitizer: DomSanitizer,private servicio: PeliculaService, private router: Router, private activatedRoute: ActivatedRoute){
-  this.pelis = new Array<Pelicula>();
   this.peliculas = new Array <Pelicula>();
- this.p = new Array <Pelicula>();
+  this.pelicula = new Pelicula();
 }
 ngOnInit(): void {
   this.activatedRoute.params.subscribe(params => {
@@ -30,6 +27,8 @@ ngOnInit(): void {
     } else {
       this.accion = "update";
       this.obtenerPelicula(params['id'])
+      this.pelicula.nombre = params['id']
+
     }
   });
 }
@@ -50,7 +49,7 @@ obtenerPelicula(nombre: string){
         unaPelicula.id = result.results[i].id
          this.peliculas.push(unaPelicula)
          unaPelicula = new Pelicula();
-         this.hola = nombre;
+         
       }
        } 
     

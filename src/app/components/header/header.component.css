@@ -1,5 +1,5 @@
 .navbar {
-    background-image: linear-gradient(to right, #000000, #333333);
+    background-image: linear-gradient(to right, #0e011f, #000000);
     color: white;
   }
 
@@ -22,6 +22,15 @@
     text-decoration: none;
     /* Puedes agregar más estilos aquí, como tamaño de logo, colores, etc. */
 }
+
+.container-fluid{
+  border: 1px solid rgba(61,79,145,.5);
+    background-color: rgba(8,15,40,.5);
+    color: inherit;
+    padding: 0.25rem 1rem;
+    border-radius: 0;
+}
+
 
   @media (max-width: 768px) {
     .navbar-nav {

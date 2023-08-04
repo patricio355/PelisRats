@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { PeliculaComponent } from './compontens/pelicula/pelicula.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
+import { EstrenoComponent } from './components/estreno/estreno.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BuscarComponent } from './components/buscar/buscar.component';
     InicioComponent,
     PeliculaComponent,
     BuscarComponent,
+    EstrenoComponent,
   ],
   imports: [
     BrowserModule,
