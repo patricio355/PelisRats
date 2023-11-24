@@ -22,6 +22,4 @@ jobs:
           tags: miapp:latest
           file: Dockerfile
 
-      - name: Publish website image
-        run: |
-          docker push miapp:latest
+     
