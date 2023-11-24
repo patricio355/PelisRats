@@ -16,4 +16,5 @@ on:
         with:
           push: true
           tags: miapp:latest
-         
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
