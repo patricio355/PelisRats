@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           platform: linux
           tags: miapp:latest
-          file: src/Dockerfile
+          file: Dockerfile
 
       - name: Publish website image
         run: |
