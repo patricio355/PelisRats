@@ -58,7 +58,7 @@ obtenerPeli(){
     result=>{
       console.log(result)
       this.peliDeCarrucel.nombre =  result.results[1].original_title;
-      this.peliDeCarrucel.imagen = "https://image.tmdb.org/t/p/w500" + result.results[1].poster_path;
+      this.peliDeCarrucel.imagen = "https://image.tmdb.org/t/p/w500" + result.results[1].backdrop_path;
       this.peliDeCarrucel.descripcion = result.results[1].description; 
       for(let i=0 ; i <=19 ;i++){
           let unaPelicula = new Pelicula();
