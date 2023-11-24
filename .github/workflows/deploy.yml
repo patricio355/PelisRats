@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master # reemplaza con tu rama principal
+      - master 
       
       jobs:
   deploy:
