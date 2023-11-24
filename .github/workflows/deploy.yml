@@ -1,8 +1,10 @@
+name: miapp
 on:
   push:
-    branches: ["master"]
-    
-      jobs:
+    branches: [ "master" ]
+    paths:
+      - 'src/**'
+jobs:
   deploy:
     runs-on: ubuntu-latest
 
