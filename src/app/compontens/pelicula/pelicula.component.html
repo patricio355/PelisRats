@@ -1,64 +1,59 @@
-
 <div class="flexin">
+
+    <div class="pancho">
+        <img src="{{pelicula.imagen}}" alt="{{pelicula.nombre}}" width="240px">
+
     
-<div>
-    <img src="{{pelicula.imagen}}" alt="{{pelicula.nombre}}" width="400p">
 
-</div>
-
-<div id="fondo">
+    <div class="fondo">
         <h1 class="text-white">{{pelicula.nombre}}</h1>
-    <section>
-        <h3 class="text-white">Descripción general</h3>
-        <p class="text-white">
-            {{pelicula.descripcion}}
-        </p>
-    </section>
-    <section>
-        <p class="text-white">
-           Presupuesto: {{pelicula.presupuesto }}
-        </p>
-       
-        <p class="text-white">
-           Popularidad: {{pelicula.popularidad}}
-        </p>
-        
-          
-           <div *ngIf="pelicula.adult == false">
-            <div class="alert alert-success" role="alert">
-                Apta para todo publico
-              </div>
-           
-             
-           </div>
-
-           <div *ngIf="pelicula.adult == true">
-            <div class="alert alert-danger" role="alert">
-                Solo para adultos
-              </div>
-           
-             
-           </div>
-           
-           <div  >
-            <img src="{{pelicula.imagenGrande}}" alt="{{pelicula.nombre}}" width="100p">
+        <section>
+            <h3 class="text-white">Descripción general</h3>
             <p class="text-white">
-                Lenguaje: {{pelicula.lenguaje}}
-             </p>
-        </div>
-        
-    </section>
+                {{pelicula.descripcion}}
+            </p>
+        </section>
+        <section>
+            <p class="text-white">
+                Presupuesto: {{pelicula.presupuesto }}
+            </p>
 
-   
+            <p class="text-white">
+                Popularidad: {{pelicula.popularidad}}
+            </p>
+
+
+            <div *ngIf="pelicula.adult == false">
+
+                <p class="text-white">Apto para todo público</p>
+
+
+
+            </div>
+
+            <div *ngIf="pelicula.adult == true">
+
+                <p class="text-white">Solo para adultos</p>
+
+
+
+            </div>
+
+            
+        </section>
+    </div>
+    </div>
+
     
+            <section class="marco">
+                <h4 class="text-white">Trailer</h4>
+                <iframe width="600" height="400" [src]="pelicula.video" frameborder="0" allowfullscreen></iframe>
+            </section>
 
-   
+     
+
+
+
+ 
+
 </div>
-
-</div>
-
-<section>
-    <h4 class="text-white">Trailer</h4>
-    <iframe width="600" height="400" [src]="pelicula.video" frameborder="0" allowfullscreen></iframe>
-</section>
-

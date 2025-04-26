@@ -12,7 +12,7 @@
   .carousel-container {
     display: flex;
     flex-wrap: wrap; /* Permite que los cuadros se ajusten automáticamente a las filas */
-   
+    width: 140%;
   }
 
   .carousel-inner{

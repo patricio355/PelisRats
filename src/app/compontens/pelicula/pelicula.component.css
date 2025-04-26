@@ -1,3 +1,21 @@
 .flexin{
     display: flex;
+    flex-direction: column;
 }
+
+.marco{
+    margin-top: 5px;
+  margin-bottom: 100px;
+    align-self: center;
+    text-align: center;
+}
+
+.pancho{
+    display: flex;
+    flex-direction: row;
+}
+
+.fondo{
+    margin-left: 10px;
+}
+
